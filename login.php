@@ -73,7 +73,7 @@ if(isset($_POST['login'])) {
     // Check if login was successful
     if(mysqli_num_rows($result) == 1) {
         // Login successful, redirect to dashboard or home page
-        header("Location: hp.html");
+        echo '<script>window.location.href = "hp.html";</script>';
         exit();
     } else {
         // Login unsuccessful, display error message
